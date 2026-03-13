@@ -38,6 +38,16 @@ Entities live in `Game.bullets[]`, `Game.enemies[]`, `Game.particles[]`. Each ha
 
 `Collision.js` provides pure utility functions (AABB, circle-AABB). Collision checking runs in `Game.checkCollisions()` in main.js. Rusher contact damage is handled separately inside `Enemy.prototype.update()`.
 
+## Git Workflow
+
+All changes must be committed and pushed to GitHub. After every set of changes:
+
+1. Stage the relevant files (`git add <files>` — avoid `git add -A` to prevent committing secrets or junk)
+2. Write a clean, concise commit message summarizing the "why" not the "what"
+3. Push to `origin main` so there is always a saved remote version
+
+This ensures easy rollback via `git revert` or `git checkout` if a change breaks things. The remote repo is at: https://github.com/cakilandeswari/pixel-blaster
+
 ## Debug
 
 - Backtick key toggles debug overlay (FPS, entity counts, hitboxes)
